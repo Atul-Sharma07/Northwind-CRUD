@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+
+    <Dialog 
+        id="productDialog"
+        title="Add Product"
+        > 
+        <form:SimpleForm>
+            <Label text="Product"/>
+            <Input placeholder="product" id="product"/>
+            <Label text="Supplier"/>
+            <Input placeholder="Supplire Detail" id="supplier"/>
+            <Label text="Price"/>
+            <Input placeholder="Price amount" id="price"/>
+            <Label text="Dimension"/>
+            <Input placeholder="Height" id="height"/>
+            <Input placeholder="Width" id="width"/>
+            <Input placeholder="Depth" id="depth"/>
+            <Label text="Weight"/>
+            <Input placeholder="Weight" id="weight"/>
+        </form:SimpleForm>
+        
+        <beginButton>
+            <Button text="Save" press="onSave" />
+        </beginButton>
+        <endButton>
+            <Button text="Cancel" press="onCancel" />
+        </endButton>
+    </Dialog>
+
+</core:FragmentDefinition>

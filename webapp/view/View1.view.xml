@@ -1,0 +1,44 @@
+<mvc:View controllerName="task1.task1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table
+            id="productTable" 
+            items="{/Products}"
+        >
+        <headerToolbar>
+            <Toolbar>
+                <Title text="ProductData"/>
+                <ToolbarSpacer />
+                <Button text="create" press="onCreate" type="Emphasized"/>
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column><Text text="ID"/></Column>
+            <Column><Text text="Name"/></Column>
+            <Column><Text text="Description"/></Column>
+            <Column><Text text="ReleaseDate"/></Column>
+            <Column><Text text="DiscontinuedDate"/></Column>
+            <Column><Text text="Rating"/></Column>
+            <Column><Text text="Price"/></Column>
+            <Column><Text text="Update"/></Column>
+            <Column><Text text="Delete"/></Column>
+        </columns>
+        <items> 
+            <ColumnListItem>
+                <cells>
+                    <Text id="IDText" text="{ID}"/>
+                    <Text text="{Name}"/>
+                    <Text text="{Description}"/>
+                    <Text text="{ReleaseDate}"/>
+                    <Text text="{DiscontinuedDate}"/>
+                    <Text text="{Rating}"/>
+                    <Text text="{Price}"/>
+                    <Button icon="sap-icon://edit" press="onUpdate"/>
+                    <Button icon="sap-icon://delete" press="onDelete"></Button>
+                </cells>
+            </ColumnListItem>
+        </items>
+        </Table>
+    </Page>
+</mvc:View>
